@@ -1,0 +1,80 @@
+body{
+  margin: 0;
+  font-family: "Inter";
+}
+.head{
+  background-color: #57C35B;
+  height: 50px;
+  color: white;
+}
+.bingoHeader{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 50px ;
+}
+.btnCon{
+  text-align: center;
+  margin-top:50px;
+
+}
+button{
+  padding: 10px 145px;
+  font-weight: 500;
+  background-color: #57C35B;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: #0c300d;
+}
+.cardCon{
+ display: flex;
+ justify-content:center;
+}
+.card{
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #E77D00;
+  width: 390px;
+  height: 480px;
+  box-sizing: border-box;
+}
+.bingo
+{
+  display: grid;
+  grid-template-columns: 65px 65px 65px 65px 65px;
+  gap: 5px;
+  padding: 20px 20px 0px 20px;
+}
+.grid{
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+.numbers{
+  height: 380px;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  display: grid;
+  grid-template-columns: 65px 65px 65px 65px 65px;
+  gap: 5px;
+  padding: 20px;
+}
+.number{
+  background-color:white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color:#E77D00;
+  font-size: 20px;
+  font-weight: 700;
+}
