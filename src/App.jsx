@@ -8,12 +8,6 @@ function getRanges(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-// B 1-15  0 5 10 15 20
-// i 16-30 1 6 11 16 21
-// n 31-45 2 7 12 17 22
-// g 46-60 3 8 13 18 23
-// o 61-75 4 9 14 19 24
-
 const matrix = [
   [0, 5, 10, 15, 20], //B -> index 0
   [1, 6, 11, 16, 21], //I -> index 1
@@ -23,6 +17,7 @@ const matrix = [
 ];
 
 function randomizeNumber(index){
+  debugger
   let result;
 
   if(index == 0) result = getRanges(1, 15);
@@ -39,7 +34,6 @@ function App() {
 
   const btnRandom = () => {
     const randomNumbers = [];
-    const savedNumbers = [];
     
     for (let i = 0; i < 25; i++) {
       let index;
@@ -51,22 +45,11 @@ function App() {
       });
 
       let randomNumber = randomizeNumber(index);
-      let included = false;
-
-      while(!included)
-      {
-        if(!savedNumbers.includes(randomNumber))
-        {
-          randomNumber = randomizeNumber(index);
-        }
-
+      
+      while(randomNumbers.includes(randomNumber)){
+        randomNumber = randomizeNumber(index);
       }
-      
-    
 
-      savedNumbers.push(randomNumber);
-      
-      console.log(savedNumbers);
       randomNumbers.push(randomNumber);
     }
 
